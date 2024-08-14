@@ -1,0 +1,32 @@
+{
+  "name": "bulbakh/webcoder",
+  "version": "0.0.1",
+  "description": "Test task",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "bulbakh",
+      "email": "bulbakh@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.3.0",
+    "ext-pdo": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "files": [
+      "config/database.php"
+    ]
+  },
+  "require-dev": {
+    "vimeo/psalm": "^5.25",
+    "squizlabs/php_codesniffer": "^3.10",
+    "phpmd/phpmd": "^2.15.0",
+    "friendsofphp/php-cs-fixer": "^3.62",
+    "phpstan/phpstan": "^1.11",
+    "phan/phan": "^5.4"
+  }
+}
