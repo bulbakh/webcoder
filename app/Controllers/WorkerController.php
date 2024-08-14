@@ -3,12 +3,15 @@
 namespace App\Controllers;
 
 use App\Core\View;
+use App\Models\Worker;
 
 class WorkerController
 {
     public function index(): void
     {
-        View::render('worker/index');
+        $worker = new Worker();
+        $workers = $worker->selectWithDepartment();
+        View::render('worker/index', compact('workers'));
     }
 
     public function add(): void
