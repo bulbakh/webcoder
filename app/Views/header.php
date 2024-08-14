@@ -12,9 +12,8 @@
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/worker/index" class="nav-link px-2 text-white">Працівники</a></li>
-                <li><a href="/department/index" class="nav-link px-2 text-white">Підрозділи</a></li>
-                <li><a href="/2/2" class="nav-link px-2 text-white">Помилковий лінк</a></li>
+                <li><a href="/worker/index" class="nav-link px-2 text-white">Workers</a></li>
+                <li><a href="/department/index" class="nav-link px-2 text-white">Departments</a></li>
             </ul>
             <h3><?= APP_NAME ?></h3>
         </div>
