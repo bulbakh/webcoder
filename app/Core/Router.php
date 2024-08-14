@@ -7,9 +7,10 @@ class Router
     private static function getRoutes(): array
     {
         return [
+            '/' => 'WorkerController@index',
+
             '/worker' => 'WorkerController@index',
             '/worker/index' => 'WorkerController@index',
-            '/worker/view' => 'WorkerController@view',
             '/worker/view/{id}' => 'WorkerController@view',
             '/worker/add' => 'WorkerController@add',
             '/worker/save' => 'WorkerController@save',
@@ -32,7 +33,8 @@ class Router
                 list($controllerClass, $method) = explode('@', $action);
                 $controllerClass = 'App\Controllers\\' . $controllerClass;
                 $controller = new $controllerClass();
-                call_user_func_array([$controller, $method], $matches);
+                $param = isset($matches[1]) ? (array)$matches[1] : [];
+                call_user_func_array([$controller, $method], $param);
                 break;
             }
         }

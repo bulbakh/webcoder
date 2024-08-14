@@ -38,7 +38,7 @@ class DepartmentController
         View::render('department/add', compact('msgs', 'request'));
     }
 
-    public function delete($query, $id): void
+    public function delete($id): void
     {
         if (empty($id)) {
             View::render('main/404');
