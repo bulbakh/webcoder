@@ -11,6 +11,7 @@ class Router
             '/worker/view' => 'WorkerController@view',
             '/worker/view/{id}' => 'WorkerController@view',
             '/worker/add' => 'WorkerController@add',
+            '/worker/save' => 'WorkerController@save',
 
             '/department' => 'DepartmentController@index',
             '/department/index' => 'DepartmentController@index',
