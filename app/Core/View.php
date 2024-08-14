@@ -1,10 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Core;
-
 class View
 {
-    public static function render($viewName)
+    public static function render($viewName): void
     {
         header("Content-Type: text/html; charset=UTF-8");
         include(VIEWS_DIR . 'header.php');

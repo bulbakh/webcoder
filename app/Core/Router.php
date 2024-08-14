@@ -1,9 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Core;
-
-use App\Controllers\WorkerController;
-
 class Router
 {
     public static function exec(array $routes): void
