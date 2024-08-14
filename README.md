@@ -3,12 +3,15 @@
 ## Installation
 ### Install via Composer
 ```
-composer create-project bulbakh/webcoder
+    composer create-project bulbakh/webcoder
 ```
 
 ## Requirements
     PHP 8.3+
     PDO enabled
+
+## Database config
+    /config.php
 
 ## DocumentRoot
     /public
