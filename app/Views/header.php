@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= APP_NAME ?></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 <header class="p-3 text-bg-dark">
@@ -19,4 +20,13 @@
         </div>
     </div>
 </header>
-<div class="container">
+<div class="container pt-4">
+    <?php extract($parameters); ?>
+
+    <?php if (!empty($msgs)):
+    foreach (\App\Core\Alerts::getAlerts($msgs) as $msg) : ?>
+        <div class="alert alert-<?= $msg['class'] ?>" role="alert">
+            <?= $msg['text'] ?>
+        </div>
+    <?php endforeach; ?>
+<?php endif; ?>
