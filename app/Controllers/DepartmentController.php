@@ -35,7 +35,7 @@ class DepartmentController
         } else {
             $msgs[] = ['type' => 'error', 'text' => 'Required field name!'];
         }
-        View::render('department/add', compact('msgs'));
+        View::render('department/add', compact('msgs', 'request'));
     }
 
     public function delete($query, $id): void
