@@ -3,7 +3,7 @@
 namespace App\Core;
 class View
 {
-    public static function render($viewName): void
+    public static function render($viewName, $parameters = []): void
     {
         header("Content-Type: text/html; charset=UTF-8");
         include(VIEWS_DIR . 'header.php');
