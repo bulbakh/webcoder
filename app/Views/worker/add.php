@@ -15,7 +15,7 @@
     </div>
     <div class="form-group mb-3">
         <label for="phone">Phone:</label>
-        <input type="phone" class="form-control" id="phone" name="phone" value="<?= $request['phone'] ?? '' ?>">
+        <input type="tel" class="form-control" id="phone" name="phone" value="<?= $request['phone'] ?? '' ?>">
     </div>
     <div class="form-group mb-3">
         <label for="comments">Comments:</label>
@@ -25,9 +25,10 @@
         <label for="department_id">Department:</label>
         <select class="form-control" id="department_id" name="department_id">
             <option value="0">Select...</option>
-            <?php foreach ($departments as $department): ?>
+            <?php /** @var array $departments */
+            foreach ($departments as $department): ?>
                 <option value="<?= $department['id'] ?>"
-                    <?= $request['department_id'] == $department['id'] ? 'selected' : '' ?>>
+                    <?= isset($request) && $request['department_id'] == $department['id'] ? 'selected' : '' ?>>
                     <?= $department['name'] ?>
                 </option>
             <?php endforeach; ?>
