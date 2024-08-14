@@ -22,11 +22,11 @@
     ]
   },
   "require-dev": {
-    "vimeo/psalm": "^5.25",
-    "squizlabs/php_codesniffer": "^3.10",
-    "phpmd/phpmd": "^2.15.0",
     "friendsofphp/php-cs-fixer": "^3.62",
+    "phan/phan": "^5.4",
+    "phpmd/phpmd": "^2.15.0",
     "phpstan/phpstan": "^1.11",
-    "phan/phan": "^5.4"
+    "squizlabs/php_codesniffer": "^3.10",
+    "vimeo/psalm": "^5.25"
   }
 }
