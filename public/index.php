@@ -11,6 +11,7 @@ $routes = [
     '/worker/add' => 'WorkerController@add',
     '/department/index' => 'DepartmentController@index',
     '/department/add' => 'DepartmentController@add',
+    '/department/save' => 'DepartmentController@save',
     '/department/delete/{id}' => 'DepartmentController@delete',
 ];
 
