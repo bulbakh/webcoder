@@ -1,9 +1,10 @@
 <?php declare(strict_types=1);
 
 namespace App\Core;
+
 class Router
 {
-    private static function getRoutes()
+    private static function getRoutes(): array
     {
         return [
             '/worker' => 'WorkerController@index',

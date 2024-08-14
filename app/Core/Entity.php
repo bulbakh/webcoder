@@ -2,7 +2,6 @@
 
 namespace App\Core;
 
-use App\Core\Db;
 use Exception;
 
 class Entity

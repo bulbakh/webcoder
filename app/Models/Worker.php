@@ -16,7 +16,8 @@ class Worker extends Entity
      * @return array|bool
      */
     public function selectWithDepartment(): array|bool
-    {   //@todo реалізувати метод join()
+    {
+        //@todo реалізувати метод join()
         return $this->db->execute("
         SELECT $this->table.*, departments.name department_name 
         FROM $this->table 

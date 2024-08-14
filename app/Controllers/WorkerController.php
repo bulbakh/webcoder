@@ -47,11 +47,11 @@ class WorkerController
         }
         $department = new Department();
         $departments = $department->select();
-        View::render('worker/add', compact('msgs','request', 'departments'));
+        View::render('worker/add', compact('msgs', 'request', 'departments'));
     }
 
     public function view(): void
     {
         View::render('worker/view');
     }
-} 
+}

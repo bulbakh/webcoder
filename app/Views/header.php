@@ -1,3 +1,4 @@
+<?php use App\Core\Alerts;?>
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -23,9 +24,9 @@
     <?php extract($parameters); ?>
 
     <?php if (!empty($msgs)):
-    foreach (\App\Core\Alerts::getAlerts($msgs) as $msg) : ?>
-        <div class="alert alert-<?= $msg['class'] ?>" role="alert">
-            <?= $msg['text'] ?>
-        </div>
-    <?php endforeach; ?>
-<?php endif; ?>
+        foreach (Alerts::getAlerts($msgs) as $msg) : ?>
+            <div class="alert alert-<?= $msg['class'] ?>" role="alert">
+                <?= $msg['text'] ?>
+            </div>
+        <?php endforeach; ?>
+    <?php endif; ?>

@@ -17,7 +17,9 @@
             <td><?= $row['id'] ?></td>
             <td><?= $row['name'] ?></td>
             <td>
-                <a href="/department/delete/<?= $row['id'] ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                <a href="/department/delete/<?= $row['id'] ?>" class="btn btn-sm btn-danger">
+                    <i class="fas fa-trash"></i>
+                </a>
             </td>
         </tr>
     <?php endforeach; ?>
