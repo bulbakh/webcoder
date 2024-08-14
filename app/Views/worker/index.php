@@ -29,6 +29,6 @@
     <?php endforeach; ?>
     </tbody>
 </table>
-<a href="/department/add" class="btn btn-primary mb-3">
+<a href="/worker/add" class="btn btn-primary mb-3">
     <i class="fas fa-plus"></i> Add
 </a>
