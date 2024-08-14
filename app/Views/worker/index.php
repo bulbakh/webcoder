@@ -19,7 +19,7 @@
     foreach ($workers as $row): ?>
         <tr>
             <td><?= $row['id'] ?></td>
-            <td><a href="/"><?= $row['email'] ?></a></td>
+            <td><a href="/worker/view/<?= $row['id'] ?>"><?= $row['email'] ?></a></td>
             <td><?= $row['name'] ?></td>
             <td><?= $row['address'] ?></td>
             <td><?= $row['phone'] ?></td>

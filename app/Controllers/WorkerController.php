@@ -50,8 +50,11 @@ class WorkerController
         View::render('worker/add', compact('msgs', 'request', 'departments'));
     }
 
-    public function view(): void
+    public function view($id): void
     {
-        View::render('worker/view');
+        $worker = new Worker();
+        $worker = $worker->selectWithDepartment((int)$id);
+        $worker = reset($worker);
+        View::render('worker/view', compact('worker'));
     }
 }

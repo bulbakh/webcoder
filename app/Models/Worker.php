@@ -13,15 +13,18 @@ class Worker extends Entity
     }
 
     /**
+     * @param int $id
      * @return array|bool
      */
-    public function selectWithDepartment(): array|bool
+    public function selectWithDepartment(int $id = null): array|bool
     {
         //@todo реалізувати метод join()
+        $where = !empty($id) ? "WHERE $this->table.id = $id" : '';
         return $this->db->execute("
         SELECT $this->table.*, departments.name department_name 
         FROM $this->table 
-        LEFT JOIN departments on $this->table.department_id = departments.id 
+        LEFT JOIN departments on $this->table.department_id = departments.id
+        $where
         ORDER BY id");
     }
 
@@ -50,7 +53,7 @@ class Worker extends Entity
         $res = [];
         $emails = $this->db->execute("SELECT email FROM $this->table");
         foreach ($emails as $email) {
-            $res[]=$email['email'];
+            $res[] = $email['email'];
         }
         return $res;
     }
