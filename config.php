@@ -2,7 +2,7 @@
 
 const APP_NAME = 'WebCoder Test Task';
 
-const DB_HOST = 'mysql-8.2';
+const DB_HOST = 'database';
 const DB_USER = 'root';
 const DB_PASSWORD = '';
 const DB_DATABASE = 'webcoder';

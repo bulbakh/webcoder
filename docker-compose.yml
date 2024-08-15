@@ -1,0 +1,52 @@
+services:
+  nginx:
+    build:
+      context: docker/nginx
+    container_name: nginx
+    restart: unless-stopped
+    volumes:
+      - .:/var/www
+    depends_on:
+      - php-fpm
+      - database
+    ports:
+      - 80:80
+    networks:
+      - webcoder
+
+  php-fpm:
+    build:
+      context: docker/php-fpm
+    container_name: php-fpm
+    restart: unless-stopped
+    environment:
+      - MYSQL_HOST=database
+      - MYSQL_PORT=3306
+      - MYSQL_DATABASE=webcoder
+      - MYSQL_USER=webcoder
+      - MYSQL_PASSWORD=
+    volumes:
+      - .:/var/www
+    depends_on:
+      - database
+    networks:
+      - webcoder
+
+  database:
+    image: bitnami/mysql:5.7
+    container_name: database
+    restart: unless-stopped
+    environment:
+      - MYSQL_DATABASE=webcoder
+      - MYSQL_USER=webcoder
+      - MYSQL_PASSWORD=
+      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./database/create.sql:/docker-entrypoint-initdb.d/create.sql
+      - ./database/populate.sql:/docker-entrypoint-initdb.d/populate.sql
+    networks:
+      - webcoder
+
+networks:
+  webcoder:
+    name: Webcoder
