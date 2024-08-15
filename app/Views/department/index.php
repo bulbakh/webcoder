@@ -3,7 +3,7 @@
 </a>
 <table class="table table-striped">
     <thead>
-    <?php //@todo назви полів додати в модель ?>
+    <?php // @todo назви полів додати в модель ?>
     <tr>
         <th>ID</th>
         <th>Name</th>

@@ -25,7 +25,7 @@ class Worker extends Entity
         FROM $this->table 
         LEFT JOIN departments on $this->table.department_id = departments.id
         $where
-        ORDER BY id");
+        ORDER BY $this->table.id");
     }
 
     /**

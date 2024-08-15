@@ -4,7 +4,7 @@ CREATE TABLE workers
     email         VARCHAR(255) UNIQUE NOT NULL,
     name          VARCHAR(255),
     address       TEXT,
-    phone         VARCHAR(20),
+    phone         VARCHAR(255),
     comments      TEXT,
     department_id INT
 );
