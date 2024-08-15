@@ -6,21 +6,7 @@ class Router
 {
     private static function getRoutes(): array
     {
-        return [
-            '/' => 'WorkerController@index',
-
-            '/worker' => 'WorkerController@index',
-            '/worker/index' => 'WorkerController@index',
-            '/worker/view/{id}' => 'WorkerController@view',
-            '/worker/add' => 'WorkerController@add',
-            '/worker/save' => 'WorkerController@save',
-
-            '/department' => 'DepartmentController@index',
-            '/department/index' => 'DepartmentController@index',
-            '/department/add' => 'DepartmentController@add',
-            '/department/save' => 'DepartmentController@save',
-            '/department/delete/{id}' => 'DepartmentController@delete',
-        ];
+        return require ROOT_DIR . '/routes.php';
     }
 
     public static function exec(): void
