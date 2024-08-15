@@ -2,19 +2,22 @@
 
 ## Installation
 ### Install via Composer
-```
-    composer create-project bulbakh/webcoder
-```
 
-## Requirements
-    PHP 8.3+
-    PDO enabled
+    composer create-project bulbakh/webcoder
+    composer dump-autoload
 
 ## Database config
     /config.php
 
+## Create tables
+    database/create.sql
+
 ## DocumentRoot
     /public
+
+## Requirements
+    PHP 8.3+
+    PDO enabled
 
 ## SEO-friendly URL
 ### Nginx
