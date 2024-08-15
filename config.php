@@ -9,23 +9,3 @@ const DB_DATABASE = 'webcoder';
 
 const ROOT_DIR = __DIR__;
 const VIEWS_DIR = ROOT_DIR . '/app/Views/';
-
-
-
-
-
-
-
-
-function dbg($var,$label='')
-{
-    echo $label .'<pre>';
-    print_r($var);
-    echo '</pre>';
-}
-
-function dbgd($var)
-{
-    dbg($var);
-    die;
-}

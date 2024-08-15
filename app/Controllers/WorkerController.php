@@ -55,6 +55,7 @@ class WorkerController
         $worker = new Worker();
         $worker = $worker->selectWithDepartment((int)$id);
         $worker = reset($worker);
+        unset($worker['department_id']);
         View::render('worker/view', compact('worker'));
     }
 }
