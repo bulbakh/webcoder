@@ -29,6 +29,7 @@ services:
       - .:/var/www
     depends_on:
       - database
+    command: ["sh", "-c", "composer dump-autoload && php-fpm"]
     networks:
       - webcoder
 
