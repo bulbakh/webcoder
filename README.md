@@ -43,7 +43,7 @@
 
 ### Apache
 
-    .htaacess
+    .htaccess
     <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
